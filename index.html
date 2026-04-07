@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E Corr Portfolio</title>
+
+   <!-- CSS linked here -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<div class="cursor"></div>
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul>
+      <li><a href="#" data-page="home">Home</a></li>
+      <li><a href="#" data-page="ringsandfields">Rings & Fields</a></li>
+      <li><a href="#" data-page="grouptheory">Group Theory</a></li>
+      <li><a href="#" data-page="references">References & More</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <main id="content">
+
+    <!-- Home Page -->
+     <section class="page" id="home">
+        <div class="home_sec1">
+        <h1>Visualizing Abstract Algebra</h1>
+        <p>
+          Exploring groups, rings, and fields through popular theorems and simple visuals. 
+          Built from a love of abstract math and a curiosity for making it more tangible.
+        </p>
+        </div>
+
+        <div class="home_split">
+        <div class="home_purpose">
+          <h3>Purpose</h3>
+          <p>
+            This project is meant to complement textbooks and courses by offering visual intuition
+            for concepts that are often abstract and difficult to picture.
+            The goal isn’t to replace formal definitions or proofs, but to provide a way of seeing the structure behind them.
+          </p>
+
+          <div class="homeimage">
+          <img src="animations/homeimage.png" class="homeimage">
+          </div>
+          
+        </div>
+
+        <div class="home_sec3">
+          <h3>What is abstract algebra?</h3>
+          <p>
+            Abstract algebra studies structures like groups, rings, and fields, 
+            focusing on how they behave and interact rather than what they’re made of.
+          </p>
+        </div>
+      </div>
+
+      <div class="introcard-container">
+        <div class="introcard">
+          <p><a href="https://math.libretexts.org/Courses/Mount_Royal_University/Abstract_Algebra_I/Chapter_2%3A_Groups/2.1%3A_Introduction_to_Group" 
+            class="fancy-link">GROUPS</a></p>
+        </div>
+
+        <div class="introcard">
+          <p><a href="https://www.mathstoon.com/ring-theory/" class="fancy-link">RINGS</a></p>
+        </div>
+
+        <div class="introcard">
+          <p><a href="https://brilliant.org/wiki/fields/" class="fancy-link">FIELDS</a></p>
+        </div>
+      </div>
+  
+      </section>
+
+    <!-- Group Theory Page -->
+    <section class="page" id="grouptheory">
+
+        <div class="page-header">
+          <h1>Group Theory</h1>
+        </div>
+
+        <div class="section-block">
+          <h2>Isomorphism Theorems (Groups)</h2>
+
+          <p class="section-description">
+            Simple visual aids for the First through Fourth Isomorphism Theorems of groups (as presented in Abstract Algebra, Third Edition by Dummit & Foote). 
+            Each theorem is accompanied by a visual and a guided outline of its proof.
+          </p>
+
+          <!-- animations go here-->
+
+          <!-- First Iso Thm-->
+          <div class="theorem-card">
+            <div class="theorem-top">
+              <div class="theorem-text">
+                <h3>First Isomorphism Theorem</h3>
+                <p>
+                  Let G and H be groups. If there exists a homomorphism φ: G → H, then 
+                  ker(φ) is a normal subgroup of G and G / ker(φ) ≅ Im[φ].
+                </p>
+              </div>
+
+              <div class="theorem-animation">
+                <iframe src="animations/FirstIsoThm.html"></iframe>
+              </div>
+            </div>
+
+            <div class="theorem-bottom">
+              <div class="proof-animation">
+                <iframe src="animations/FirstIso_Proof.html" class="proof-frame"></iframe>
+              </div>
+              <div class="proof-label">
+                <h4>Proof Outline</h4>
+                  <p>
+                    Step-by-step visualization of the structure of the proof.
+                  </p>
+              </div>
+            </div>
+            
+          </div>
+        
+
+        <!-- Second Iso Thm-->
+        <div class="theorem-card">
+          <div class="theorem-top">
+            <div class="theorem-text">
+              <h3>Second Isomorphism Theorem</h3>
+              <p>
+              Let G be a group and H a normal subgroup of G. If A is any subgroup of G, then
+              H∩A is also a normal subgroup of G and A/(H ∩ A) ≅ HA/A.
+              </p>
+            </div>
+
+            <div class="theorem-animation">
+              <iframe src="animations/SecondIsoThm.html"></iframe>
+            </div>
+          </div>
+          <div class="theorem-bottom">
+            <div class="proof-animation">
+              <iframe src="animations/SecondIso_Proof.html" class="proof-frame"></iframe>
+            </div>
+            <div class="proof-label">
+                <h4>Proof Outline</h4>
+                  <p>
+                    Step-by-step visualization of the structure of the proof.
+                  </p>
+              </div>
+          </div>
+          
+        </div>
+
+        <!-- Third Iso Thm-->
+        <div class="theorem-card">
+        <div class="theorem-top">
+          <div class="theorem-text">
+            <h3> Third Isomorphism Theorem</h3>
+            <p>
+            Let G be a group and A a normal subgroup of G. Suppose H is a normal subgroup of G and A. Then
+            A/H is a normal subgroup of G/H and (G/H)/(A/H) ≅ G/A.
+          </p>
+          </div>
+          <div class="theorem-animation">
+            <iframe src="animations/ThirdIsoThm.html"></iframe>
+          </div>
+        </div>
+        
+        <div class="theorem-bottom">
+          <div class="proof-animation">
+            <iframe src="animations/ThirdIso_Proof.html" class="proof-frame"></iframe>
+          </div>
+          <div class="proof-label">
+            <h4>Proof Outline</h4>
+              <p>
+                Step-by-step visualization of the structure of the proof.
+              </p>
+          </div>
+        </div>
+        </div>
+
+        <!-- Fourth Iso Thm-->
+        <div class="theorem-card">
+          <div class="theorem-top">
+            <div class="theorem-text">
+              <h3>Fourth Isomorphism Theorem</h3>
+              <p>
+                Let G be a group. If N is a normal subgroup of G then there exists a bijection between the
+                subgroups of G containing N and the quotient group G/N.
+              </p>
+            </div>
+            <div class="theorem-animation">
+              <iframe src="animations/FourthIsoThm.html"></iframe>
+            </div>
+          </div>
+
+          <div class="theorem-bottom">
+            <div class="proof-animation">
+              <iframe src="animations/FourthIso_Proof.html" class="proof-frame"></iframe>
+            </div>
+            <div class="proof-label">
+              <h4>Proof Outline</h4>
+                <p>
+                  Step-by-step visualization of the structure of the proof.
+                </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      </div>
+
+
+    <!-- Rings and Fields Page -->
+    <section class="page" id="ringsandfields">
+
+      <h1>Rings & Fields</h1>
+      <p>
+        Visual explorations related to ring and field theory.
+        (Coming soon!)
+      </p>
+
+    </section>
+
+    <!-- References and More -->
+    <section class="page" id="references">
+
+      <h1>Texbooks</h1>
+      <p><a href="https://www.directtextbook.com/isbn/9780471433347-abstract-algebra-3rd-edition" 
+      class="fancy-link">Abstract Algebra 3rd Edition , Dummit & Foote</a></p>
+      <p><a href="https://www.johnabeachy.com/abstractalgebra" 
+        class="fancy-link">Algebra 4th Edition, Beachy & Blair</a></p>
+
+      <h1>Other References</h1>
+      <p> <a href=https://proofwiki.org/wiki/Isomorphism_Theorems class="fancy-link">  
+        Isomorphism Theorems and Proofs (Groups and Rings)</a></p>
+      <p> <a href=https://crypto.stanford.edu/pbc/notes/group/isomorphism.html class="fancy-link">
+        Group Theory Isomorphism Thm Notes - Stanford</a></p>
+      <p> <a href=https://ocw.mit.edu/courses/18-703-modern-algebra-spring-2013/b40d60898322bbd1d63410b0a925946a_MIT18_703S13_pra_l_10.pdf 
+        class="fancy-link">MIT Modern Algebra Notes - Isomorphism Theorems</a></p>
+      <p> <a href=https://www.geeksforgeeks.org/engineering-mathematics/group-rings-and-fields-in-group-theory/
+        class="fancy-link">Groups, Rings, & Fields - An Introduction</a></p>
+      
+      <h1>Videos</h1>
+      <p> <a href=https://www.youtube.com/watch?v=2kmIHyD8zTk&list=LL&index=13 class="fancy-link">
+        'The Essence of Group Theory'</a></p>
+      <p> <a href=https://www.youtube.com/watch?v=mH0oCDa74tE&list=LL&index=19 class="fancy-link">
+        'The Monster - Group Theory & Absractions'</a></p>
+
+    </section>
+
+  </main>
+
+
+  <!-- JavaScript linked here -->
+  <script src="script.js"></script>
+</body>
+
+</html>

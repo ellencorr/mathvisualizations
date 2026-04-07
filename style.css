@@ -1,0 +1,412 @@
+.fancy-link {
+  position: relative;
+  color: #ffefadb8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+/* underline base */
+.fancy-link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #a95f5f;
+  transition: all 0.25s cubic-bezier(.46,.01,.14,1.35);
+  z-index: -1;
+}
+
+/* expanding highlight */
+.fancy-link::after {
+  content: attr(href);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  font-size: 10px;
+  color: white;
+  background-color: #a95f5f;
+  padding: 0 8px;
+  transform: translateY(100%);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(.46,.01,.14,1.35);
+  z-index: -1;
+}
+
+/* hover effect */
+.fancy-link:hover {
+  color: white;
+}
+
+.fancy-link:hover::before {
+  height: 100%;
+  bottom: 0;
+}
+
+.fancy-link:hover::after {
+  transform: translateY(50%);
+  opacity: 1;
+  max-height: 30px;
+  padding: 6px 8px;
+}
+
+
+/*cursor adjusments*/
+  /*hide og cursor*/
+* {
+  cursor: none;
+}
+  /*syled, new cursor*/
+.cursor {
+  width: 18px;
+  height: 18px;
+  border: 2px solid white;
+  fill-opacity: 50%;
+  fill: solid white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease, left 0.1s ease, top 0.1s ease;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+body.hide-main-cursor .cursor {
+  opacity: 0;
+}
+
+/*iFrame Styling*/
+iframe {
+  width: 100%;
+  border-radius: 6px;
+  border: none;
+}
+
+
+/*Theorem Card Styling*/
+.theorem-card {
+  background-color: #F3E4D4;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 40px auto;
+  max-width: 100%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+
+.theorem-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.theorem-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.theorem-top {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.theorem-text {
+  flex: 1;
+}
+
+.theorem-animation {
+  flex: 1.2;
+}
+.theorem-bottom {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+/*proof section within thm card*/
+.proof-animation {
+  flex: 1.2;
+}
+
+.proof-label {
+  flex: 1;
+}
+
+/*formatting details for thm card & animation frame*/
+@media (max-width: 1000px) {
+  .theorem-top,
+  .theorem-bottom {
+    flex-direction: column;
+  }
+
+  .theorem-card iframe {
+    height: 400px;
+  }
+}
+
+.theorem-card:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.theorem-card iframe {
+  width: 100%;
+  height: 600px; /* smaller since side-by-side */
+  border: none;
+  border-radius: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Home Page Styling*/
+#home {
+  padding: 60px 20px;
+  height: 100vh;
+}
+.homeimage {
+  transform: translate(300px, -110px);
+  width: 100%;
+  max-width: 350px;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+.home_sec1 {
+  transform: translateY(-60px);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ead2b8a8;
+  font-size: 20px;
+}
+.home_sec1 p {
+  margin-top: 1rem;
+}
+.home_sec1 h1 {
+  margin-bottom: 0rem;
+}
+
+.home_split {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin: 80px auto;
+  max-width: 1100px;
+  flex-wrap: wrap; /* VERY important */
+}
+/* offset the right section slightly higher */
+.home_purpose {
+  transform: translateY(-100px);
+  margin: 0;
+  min-width: 300px;
+  flex: 1;
+  text-align: left;
+  color: #ead2b8a8;
+  margin-left: 50px;
+  margin-right: 500px;
+}
+.home_purpose p{
+  font-size: 18px;
+  margin-top: 0.75rem;
+}
+.home_purpose h3 {
+  color: #fdeeb3a9;
+  font-size: 26px;
+  margin-bottom: 0rem;
+}
+.home_sec3 {
+  transform: translateY(-350px);
+  text-align: left; 
+  margin: 0;
+  min-width: 300px;
+  flex: 1;
+  color: #ead2b8a8;
+  margin-right: 9cap;
+  margin-left: 650px;
+}
+.home_sec3 p{
+  font-size: 18px;
+  margin-top: 0.75rem;
+}
+.home_sec3 h3 {
+  color: #fdeeb3a9;
+  font-size: 26px;
+  margin-bottom: 0rem;
+}
+/*intro cards - in home page*/
+.introcard-container {
+  transform: translateX(-260px);
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.introcard {
+  transform: translateY(-565px);
+  background: #a95f5f;
+  padding: 2px;
+  border-radius: 6px;
+  width: 120px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #FFEEAD;
+  border-width: 2;
+}
+.introcard a {
+  color: #8B1E2D; /* example: darker red */
+  text-decoration: none;
+  font-weight: bold;
+}
+.introcard a:hover {
+  color: #c4455a; /* lighter/red accent */
+}
+
+
+/*general formatting & styling*/
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-block {
+  width: 100%;
+  border-radius: 16px;
+  background: #EAD8C5; 
+  padding: 40px 0;
+}
+
+.section-block h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #A02334;
+}
+
+.section-description {
+  text-align: center;
+  max-width: 90%;
+  margin: 0 auto 40px auto;
+}
+
+body {
+  background: #A02334;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/* Page system */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+nav {
+  background-color: none;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  justify-content: center;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  position: relative;
+  text-align: center;
+  color: #FFEEAD;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.25s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a.active-link::after {
+  width: 100%;
+}
+
+main {
+  padding: 2rem;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #FFEEAD;
+}
+
+h3 {
+  color: #A02334;
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+h4 {
+  color: #A02334;
+  font-size: 24px;
+}
+
+
+.topic-description {
+  margin: 6px 0 0 0;
+  color: #555;
+}
+
+/*general styling*/
+h1 {
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+h1,
+h2,
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3,
+h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
